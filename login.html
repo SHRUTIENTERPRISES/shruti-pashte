@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>श्रुती इंटरप्रयाजेस</title>
+    <link rel="icon" type="image/jpg" href="img/fevicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Login Page</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace with your authentication logic here
+            if (username === "admin" && password === "Shruti@45") {
+                // Successful login
+                showToast("Login Successful", "success");
+                // Redirect to another page
+                window.location.href = "shruti0804.html";
+            } else {
+                // Failed login
+                showToast("Invalid username or password", "error");
+            }
+        }
+
+        function showToast(message, type) {
+            var toast = document.createElement("div");
+            toast.className = "toast";
+            toast.innerHTML = message;
+
+            if (type === "success") {
+                toast.classList.add("toast-success");
+            } else if (type === "error") {
+                toast.classList.add("toast-error");
+            }
+
+            document.body.appendChild(toast);
+            setTimeout(function () {
+                document.body.removeChild(toast);
+            }, 3000); // Display for 3 seconds
+        }
+    </script>
+
+    <style>
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .toast-success {
+            background-color: #28a745;
+        }
+
+        .toast-error {
+            background-color: #dc3545;
+        }
+    </style>
+</body>
+</html>

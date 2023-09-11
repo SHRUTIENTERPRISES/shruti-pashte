@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्रुती इंटरप्रयाजेस</title>
+    <link rel="icon" type="image/jpg" href="img/fevicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Admin Dashboard</h2>
+        <form id="addBlogForm">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea class="form-control" id="content" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imgUpload">Image:</label>
+                <input type="file" class="form-control" id="imgUpload" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Blog</button>
+        </form>
+        <div id="adminBlogContainer" class="mt-5"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

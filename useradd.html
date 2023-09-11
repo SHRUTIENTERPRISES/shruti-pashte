@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog System - User Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles for blog cards */
+        .blog-card {
+            width: 10rem;
+            margin: 10px; /* Add space between cards */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow */
+            transition: transform 0.2s; /* Add hover effect */
+            float: left; /* Ensure cards are displayed in a row */
+            background-color: #fff; /* Set card background color */
+            padding: 15px; /* Add padding for content */
+        }
+
+        .blog-card:hover {
+            transform: scale(1.05); /* Enlarge on hover */
+        }
+
+        /* Clear floats to ensure rows */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Add space between rows */
+        .row-with-space {
+            margin-bottom: 20px;
+        }
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: 	crimson;
+;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+         <center>   <h5 class="blink"> नवीन आलेल्या योजनांची माहिती व लागणारे दाखले इथे पहा.</h5></center>
+        <div id="blogContainer" class="mt-2"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
